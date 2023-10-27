@@ -1,0 +1,29 @@
+{
+  "name": "featureflags-backend",
+  "version": "1.1.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antonybudianto/express-firebase.git"
+  },
+  "keywords": [],
+  "author": "Antony Budianto <antonybudianto@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/antonybudianto/express-firebase/issues"
+  },
+  "homepage": "https://github.com/antonybudianto/express-firebase#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "express-firebase-middleware": "^3.0.0",
+    "firebase-admin": "^8.5.0"
+  }
+}
