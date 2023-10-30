@@ -46,6 +46,7 @@ npm start
 
 Here's the structure for the data model of a feature flag:
 
+- `name:` The parent flag name. Type: `String`
 - `childFlagName:` The child flag name. Type: `String`
 - `creationDate:` The date the flag was created. Type: `Timestamp`
 - `description:` A brief description of the flag. Type: `String`
@@ -55,8 +56,7 @@ Here's the structure for the data model of a feature flag:
 - `flagValue:` The value of the flag (e.g., "text"). Type: `String`
 - `isGroupFlag:` Indicates if the flag is a group flag. Type: `Boolean`
 - `modifiedDate:` The date the flag was last modified. Type: `Timestamp`
-- `name:` The parent flag name. Type: `String`
-- `restrictionLevel:` The restriction level of the flag. Type: `String`
+- `restrictionLevel:` The restriction level of the flag(Public, private). Type: `String`
 
 ### Usage
 
