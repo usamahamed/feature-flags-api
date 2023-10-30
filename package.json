@@ -12,12 +12,12 @@
     "url": "git+https://github.com/antonybudianto/express-firebase.git"
   },
   "keywords": [],
-  "author": "Antony Budianto <antonybudianto@gmail.com>",
+  "author": "Usama Hamed <usama.hamed@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/antonybudianto/express-firebase/issues"
+    "url": "https://github.com/usamahamed/feature-flags-api/issues"
   },
-  "homepage": "https://github.com/antonybudianto/express-firebase#readme",
+  "homepage": "https://github.com/usamahamed/feature-flags-api#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",

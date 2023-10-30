@@ -4,6 +4,7 @@ This is an API designed to manage feature flags using Firebase's Firestore as th
 ## Table of Contents
 - Features
 - Setup
+- Data Model
 - Usage
 - Contributing
 - License
@@ -41,57 +42,76 @@ FIREBASE_SERVICE_ACCOUNT_KEY_PATH=path_to_your_firebase_service_account.json
 npm start
 ```
 
+### Data Model
+
+Here's the structure for the data model of a feature flag:
+
+- `childFlagName:` The child flag name. Type: `String`
+- `creationDate:` The date the flag was created. Type: `Timestamp`
+- `description:` A brief description of the flag. Type: `String`
+- `environment:` The environment for which the flag is set (e.g., "production"). Type: `String`
+- `extid:` A unique, auto-generated identifier for the flag. Type: `String`
+- `flagGroups:` An array of groups the flag belongs to. Type: `Array<String>`
+- `flagValue:` The value of the flag (e.g., "text"). Type: `String`
+- `isGroupFlag:` Indicates if the flag is a group flag. Type: `Boolean`
+- `modifiedDate:` The date the flag was last modified. Type: `Timestamp`
+- `name:` The parent flag name. Type: `String`
+- `restrictionLevel:` The restriction level of the flag. Type: `String`
+
 ### Usage
 
 ### Fetch All Feature Flags
 
-##### GET /flags
+GET /flags
 
 Response:
 
 ```
 {
-    "flag1": { "data": "..." },
-    "flag2": { "data": "..." },
+    "id1": { "name": "..." },
+    "id2": { "name": "..." },
     ...
 }
 ```
 
-#### Create a New Feature Flag
-
-##### POST /flags
-
-Request Body:
-
-````
-{
-    "name": "newFlag",
-    "data": "..."
-}
-````
-
 #### Fetch a Feature Flag by extid
 
-##### GET /flags/:extid
+GET /flags/:extid
 
 Response:
 
 ```
 {
     "name": "flagName",
-    "data": "..."
+    ....
 }
 ```
 
+#### Create a New Feature Flag
+
+POST /flags
+
+Request Body:
+
+````
+{
+    "name": "newFlag",
+    ....
+}
+````
+
+
+
 #### Update a Feature Flag
 
-##### PUT /flags/:extid
+PUT /flags/:extid
 
 Request Body:
 
 ```
 {
-    "data": "newData"
+    "name": "newFlag",
+    ....
 }
 ```
 
